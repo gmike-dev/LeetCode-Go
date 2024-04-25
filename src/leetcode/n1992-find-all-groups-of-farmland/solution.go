@@ -1,4 +1,4 @@
-package leetcode_1992
+package n1992_find_all_groups_of_farmland
 
 func findFarmland(land [][]int) [][]int {
 	n := len(land)

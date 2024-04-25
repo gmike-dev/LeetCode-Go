@@ -1,4 +1,4 @@
-package _52_Open_the_Lock
+package n752_open_the_Lock
 
 import "strconv"
 

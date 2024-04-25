@@ -1,7 +1,7 @@
-package leetcode_1992
+package n1992_find_all_groups_of_farmland
 
 import (
-	"reflect"
+	"github.com/stretchr/testify/assert"
 	"testing"
 )
 
@@ -15,9 +15,7 @@ func TestFindFarmland1(t *testing.T) {
 		{0, 0, 0, 0},
 		{1, 1, 2, 2},
 	}
-	if !reflect.DeepEqual(actual, expected) {
-		t.Errorf("expected:%v, actual:%v", expected, actual)
-	}
+	assert.Equal(t, expected, actual)
 }
 func TestFindFarmland2(t *testing.T) {
 	actual := findFarmland([][]int{
@@ -27,16 +25,12 @@ func TestFindFarmland2(t *testing.T) {
 	expected := [][]int{
 		{0, 0, 1, 1},
 	}
-	if !reflect.DeepEqual(actual, expected) {
-		t.Errorf("expected:%v, actual:%v", expected, actual)
-	}
+	assert.Equal(t, expected, actual)
 }
 func TestFindFarmland3(t *testing.T) {
 	actual := findFarmland([][]int{
 		{0},
 	})
 	expected := [][]int{}
-	if !reflect.DeepEqual(actual, expected) {
-		t.Errorf("expected:%v, actual:%v", expected, actual)
-	}
+	assert.Equal(t, expected, actual)
 }
