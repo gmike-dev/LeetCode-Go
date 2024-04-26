@@ -5,8 +5,8 @@ import (
 	"testing"
 )
 
-func TestOpenLock1(t *testing.T) {
-	actual := minFallingPathSum([][]int{
+func TestMinFallingPathSumV1_1(t *testing.T) {
+	actual := minFallingPathSumV1([][]int{
 		{1, 2, 3},
 		{4, 5, 6},
 		{7, 8, 9},
@@ -15,8 +15,8 @@ func TestOpenLock1(t *testing.T) {
 	assert.Equal(t, expected, actual)
 }
 
-func TestOpenLock2(t *testing.T) {
-	actual := minFallingPathSum([][]int{
+func TestMinFallingPathSumV1_2(t *testing.T) {
+	actual := minFallingPathSumV1([][]int{
 		{7},
 	})
 	expected := 7

@@ -5,7 +5,8 @@ import (
 	"slices"
 )
 
-func minFallingPathSum(grid [][]int) int {
+// O^3 solution
+func minFallingPathSumV1(grid [][]int) int {
 	n := len(grid)
 	for i := 1; i < n; i++ {
 		prev := grid[i-1]
