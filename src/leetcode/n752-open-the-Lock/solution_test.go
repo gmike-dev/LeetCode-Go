@@ -10,11 +10,13 @@ func TestOpenLock1(t *testing.T) {
 	expected := 6
 	assert.Equal(t, expected, actual)
 }
+
 func TestOpenLock2(t *testing.T) {
 	actual := openLock([]string{"8888"}, "0009")
 	expected := 1
 	assert.Equal(t, expected, actual)
 }
+
 func TestOpenLock3(t *testing.T) {
 	actual := openLock([]string{"8887", "8889", "8878", "8898", "8788", "8988", "7888", "9888"}, "8888")
 	expected := -1
@@ -26,6 +28,7 @@ func TestOpenLock4(t *testing.T) {
 	expected := 10
 	assert.Equal(t, expected, actual)
 }
+
 func TestOpenLock5(t *testing.T) {
 	actual := openLock([]string{"0000"}, "8888")
 	expected := -1
