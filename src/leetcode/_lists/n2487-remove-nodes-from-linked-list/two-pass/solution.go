@@ -1,9 +1,8 @@
-package two_pass
+package leetcode
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import list "LeetCode-Go/collections"
+
+type ListNode = list.ListNode
 
 func removeNodes(head *ListNode) *ListNode {
 	left := head

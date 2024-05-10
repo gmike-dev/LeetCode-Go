@@ -1,9 +1,8 @@
-package n2816_double_a_number_represented_as_a_linked_list
+package leetcode
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import list "LeetCode-Go/collections"
+
+type ListNode = list.ListNode
 
 func doubleIt(head *ListNode) *ListNode {
 	head = ReverseList(head)

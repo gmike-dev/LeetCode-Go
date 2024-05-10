@@ -1,4 +1,4 @@
-package queue
+package collections
 
 type Queue struct {
 	queue []any

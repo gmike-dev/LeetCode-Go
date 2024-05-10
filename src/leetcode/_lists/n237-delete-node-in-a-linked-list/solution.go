@@ -1,9 +1,8 @@
-package n237_delete_node_in_a_linked_list
+package leetcode
 
-type ListNode struct {
-	Val  int
-	Next *ListNode
-}
+import list "LeetCode-Go/collections"
+
+type ListNode = list.ListNode
 
 func deleteNode(node *ListNode) {
 	node.Val = node.Next.Val
