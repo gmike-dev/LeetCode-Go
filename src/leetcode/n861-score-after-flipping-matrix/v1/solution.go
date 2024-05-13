@@ -1,4 +1,4 @@
-package n861_score_after_flipping_matrix
+package v1
 
 func matrixScore(grid [][]int) int {
 	m := len(grid)

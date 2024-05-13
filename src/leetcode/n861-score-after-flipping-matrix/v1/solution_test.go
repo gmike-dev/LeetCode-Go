@@ -1,4 +1,4 @@
-package n861_score_after_flipping_matrix
+package v1
 
 import (
 	"github.com/stretchr/testify/assert"
