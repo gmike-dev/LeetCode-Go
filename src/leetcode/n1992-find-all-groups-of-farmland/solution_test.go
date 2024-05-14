@@ -17,6 +17,7 @@ func TestFindFarmland1(t *testing.T) {
 	}
 	assert.Equal(t, expected, actual)
 }
+
 func TestFindFarmland2(t *testing.T) {
 	actual := findFarmland([][]int{
 		{1, 1},
@@ -27,6 +28,7 @@ func TestFindFarmland2(t *testing.T) {
 	}
 	assert.Equal(t, expected, actual)
 }
+
 func TestFindFarmland3(t *testing.T) {
 	actual := findFarmland([][]int{
 		{0},
