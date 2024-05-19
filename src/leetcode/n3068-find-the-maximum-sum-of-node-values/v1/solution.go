@@ -1,4 +1,4 @@
-package n3068_find_the_maximum_sum_of_node_values
+package v1
 
 import (
 	"slices"

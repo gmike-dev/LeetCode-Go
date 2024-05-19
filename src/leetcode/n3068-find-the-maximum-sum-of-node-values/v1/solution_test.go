@@ -1,4 +1,4 @@
-package n3068_find_the_maximum_sum_of_node_values
+package v1
 
 import (
 	"github.com/stretchr/testify/assert"
@@ -15,4 +15,8 @@ func TestMaximumValueSum2(t *testing.T) {
 
 func TestMaximumValueSum3(t *testing.T) {
 	assert.Equal(t, int64(42), maximumValueSum([]int{7, 7, 7, 7, 7, 7}, 3, [][]int{{0, 1}, {0, 2}, {0, 3}, {0, 4}, {0, 5}}))
+}
+
+func TestMaximumValueSum4(t *testing.T) {
+	assert.Equal(t, int64(260), maximumValueSum([]int{24, 78, 1, 97, 44}, 6, nil))
 }
