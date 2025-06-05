@@ -8,27 +8,25 @@ func smallestEquivalentString(s1 string, s2 string, baseStr string) string {
 	}
 	for i := 0; i < n; i++ {
 		x, y := int(s1[i]-'a'), int(s2[i]-'a')
-		px, py := x, y
-		for p[px] != px {
-			px = p[px]
+		for p[x] != x {
+			x = p[x]
 		}
-		for p[py] != py {
-			py = p[py]
+		for p[y] != y {
+			y = p[y]
 		}
-		if px < py {
-			p[py] = px
+		if x < y {
+			p[y] = x
 		} else {
-			p[px] = py
+			p[x] = y
 		}
 	}
-	m := len(baseStr)
-	result := make([]byte, m)
+	result := make([]byte, len(baseStr))
 	for i, c := range baseStr {
-		pc := int(c - 'a')
-		for p[pc] != pc {
-			pc = p[pc]
+		x := int(c - 'a')
+		for p[x] != x {
+			x = p[x]
 		}
-		result[i] = byte('a' + pc)
+		result[i] = byte('a' + x)
 	}
 	return string(result)
 }
