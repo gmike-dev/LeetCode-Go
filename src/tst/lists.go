@@ -11,11 +11,11 @@ import (
 )
 
 func ListEqual[T any](t *testing.T, expected string, actual []T) {
-	assert.Equal(t, expected, List2String(actual))
+	assert.Equal(t, expected, List2Str(actual))
 }
 
 func MatrixEqual[T any](t *testing.T, expected string, actual [][]T) {
-	assert.Equal(t, expected, Mx2String(actual))
+	assert.Equal(t, expected, Mx2Str(actual))
 }
 
 func Str2List(s string) []int {
@@ -52,7 +52,7 @@ func Str2Matrix(s string) [][]int {
 	return res
 }
 
-func List2String[T any](a []T) string {
+func List2Str[T any](a []T) string {
 	s := strings.Builder{}
 	s.WriteString("[")
 	for i, x := range a {
@@ -65,14 +65,14 @@ func List2String[T any](a []T) string {
 	return s.String()
 }
 
-func Mx2String[T any](a [][]T) string {
+func Mx2Str[T any](a [][]T) string {
 	s := strings.Builder{}
 	s.WriteString("[")
 	for i, x := range a {
 		if i != 0 {
 			s.WriteString(",")
 		}
-		s.WriteString(List2String(x))
+		s.WriteString(List2Str(x))
 	}
 	s.WriteString("]")
 	return s.String()

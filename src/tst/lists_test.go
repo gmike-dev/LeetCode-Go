@@ -22,16 +22,16 @@ func TestStr2Matrix(t *testing.T) {
 }
 
 func TestList2String(t *testing.T) {
-	assert.Equal(t, "[]", List2String([]int{}))
-	assert.Equal(t, "[-10]", List2String([]int{-10}))
-	assert.Equal(t, "[1,2,3]", List2String([]int{1, 2, 3}))
+	assert.Equal(t, "[]", List2Str([]int{}))
+	assert.Equal(t, "[-10]", List2Str([]int{-10}))
+	assert.Equal(t, "[1,2,3]", List2Str([]int{1, 2, 3}))
 }
 
 func TestMx2String(t *testing.T) {
-	assert.Equal(t, "[]", Mx2String([][]int{}))
-	assert.Equal(t, "[[]]", Mx2String([][]int{{}}))
-	assert.Equal(t, "[[],[]]", Mx2String([][]int{{}, {}}))
-	assert.Equal(t, "[[1,2,3]]", Mx2String([][]int{{1, 2, 3}}))
-	assert.Equal(t, "[[1,2,3],[4],[5,6]]", Mx2String([][]int{{1, 2, 3}, {4}, {5, 6}}))
-	assert.Equal(t, "[[1,2,3],[4],[]]", Mx2String([][]int{{1, 2, 3}, {4}, {}}))
+	assert.Equal(t, "[]", Mx2Str([][]int{}))
+	assert.Equal(t, "[[]]", Mx2Str([][]int{{}}))
+	assert.Equal(t, "[[],[]]", Mx2Str([][]int{{}, {}}))
+	assert.Equal(t, "[[1,2,3]]", Mx2Str([][]int{{1, 2, 3}}))
+	assert.Equal(t, "[[1,2,3],[4],[5,6]]", Mx2Str([][]int{{1, 2, 3}, {4}, {5, 6}}))
+	assert.Equal(t, "[[1,2,3],[4],[]]", Mx2Str([][]int{{1, 2, 3}, {4}, {}}))
 }
