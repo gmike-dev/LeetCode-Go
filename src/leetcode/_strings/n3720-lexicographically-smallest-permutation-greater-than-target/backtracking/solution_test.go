@@ -1,4 +1,4 @@
-package n3720_lexicographically_smallest_permutation_greater_than_target
+package backtracking
 
 import (
 	"testing"

@@ -1,20 +1,20 @@
-package n3720_lexicographically_smallest_permutation_greater_than_target
+package backtracking
 
 func lexGreaterPermutation(s string, t string) string {
-	cnt := make([]int, 26)
+	cnt := make([]int, 128)
 	n := len(s)
 	for i := range n {
-		cnt[s[i]-'a']++
+		cnt[s[i]]++
 	}
 	a := make([]byte, n)
 
 	var f func(int) bool
 
 	f = func(pos int) bool {
-		if pos == n {
+		if pos >= n {
 			return false
 		}
-		tc := t[pos] - 'a'
+		tc := t[pos]
 		if cnt[tc] > 0 {
 			a[pos] = t[pos]
 			cnt[tc]--
@@ -23,14 +23,14 @@ func lexGreaterPermutation(s string, t string) string {
 			}
 			cnt[tc]++
 		}
-		for c := tc + 1; c < 26; c++ {
+		for c := tc + 1; c <= 'z'; c++ {
 			if cnt[c] > 0 {
-				a[pos] = c + 'a'
+				a[pos] = c
 				cnt[c]--
 				pos++
-				for i := byte(0); i < 26; i++ {
+				for i := 'a'; i <= 'z'; i++ {
 					for cnt[i] > 0 {
-						a[pos] = i + 'a'
+						a[pos] = byte(i)
 						pos++
 						cnt[i]--
 					}
