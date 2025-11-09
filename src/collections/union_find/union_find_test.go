@@ -1,4 +1,4 @@
-package collections
+package union_find
 
 import (
 	"testing"
